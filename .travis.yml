@@ -18,6 +18,7 @@ after_success:
   - docker build -t leeseungryeol/docker-backend ./backend
   - docker build -t leeseungryeol/docker-nginx ./nginx
 
+
  - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
 
   - docker push leeseungryeol/docker-frontend
