@@ -11,6 +11,7 @@ script:
    - docker run -e CI=true leeseungryeol/react-test-app npm test
 
 
+
 after_success:
   - docker build -t leeseungryeol/docker-frontend ./frontend
   - docker build -t leeseungryeol/docker-backend ./backend
