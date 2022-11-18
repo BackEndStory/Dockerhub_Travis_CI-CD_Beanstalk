@@ -10,12 +10,12 @@ script:
    - docker run -e CI=true leeseungryeol/react-test-app npm test
 
 after_success:
-  - doker build -t leeseungryoel/docker-frontend ./frontend
-  - doker build -t leeseungryoel/docker-backend ./backend
+  - doker build -t leeseungryeol/docker-frontend ./frontend
+  - doker build -t leeseungryeol/docker-backend ./backend
   - docker build -t leeseungryeol/docker-nginx ./nginx
 
   - echo "$DOCKER_HUB_PASSWORD" || docker login -u "$DOCKER_HUB_ID" --password-stdin
 
-  - docker push leeseungryoel/docker-frontend
-  - docker push leeseungryoel/docker-backend
+  - docker push leeseungryeol/docker-frontend
+  - docker push leeseungryeol/docker-backend
   - docker push leeseungryeol/docker-nginx
