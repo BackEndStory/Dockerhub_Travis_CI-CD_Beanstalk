@@ -10,6 +10,7 @@ before_install:
 script: 
   # - docker run -e CI=true leeseungryeol/react-test-app npm test
 
+
 after_success:
   - doker build -t leeseungryeol/docker-frontend ./frontend
   - doker build -t leeseungryeol/docker-backend ./backend
