@@ -6,6 +6,7 @@ services:
 before_install:
    - docker build -t leeseungryeol/react-test-app -f ./frontend/Dockerfile.dev ./frontend
    
+   
 script: 
   # - docker run -e CI=true leeseungryeol/react-test-app npm test
 
