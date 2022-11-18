@@ -8,7 +8,7 @@ before_install:
    
    
 script: 
-   - docker run -e CI=true leeseungryeol/react-test-app 
+   - docker run -e CI=true leeseungryeol/react-test-app npm test
 
 
 after_success:
